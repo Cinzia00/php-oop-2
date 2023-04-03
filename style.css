@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(255, 255, 174);
+}
+
+.shop-title {
+    color: mediumaquamarine;
+}
+.title {
+    text-align: center;
+}
+
+.text {
+    color: purple;
+}
+
+.border {
+    border: none;
+}
+
+.col {
+    width: calc(100% / 3 );
+}
