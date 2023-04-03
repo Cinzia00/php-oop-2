@@ -1,32 +1,35 @@
 <?php
 require_once __DIR__ . "/Prodotto.php";
+require_once __DIR__ . "/materialeTipo.php";
+
 
 
 class Cuccia extends Prodotto {
-    protected $materiale;
+    use materialeTipo;
+    // protected $materiale;
     protected $tipo;
 
     function __construct($nome, $prezzo, $categoria, $marca, $immagine, $_materiale){
         parent::__construct($nome, $prezzo, 'cuccia', $categoria, $marca, $immagine);
 
-        $this->materiale = $_materiale;
+        // $this->materiale = $_materiale;
     }
 
-    public function getMateriale() {
-        return $this->materiale;
-    }
+    // public function getMateriale() {
+    //     return $this->materiale;
+    // }
 
-    public function getTipo() {
-        return $this->tipo;
-    }
+    // public function getTipo() {
+    //     return $this->tipo;
+    // }
 
-    public function setMateriale($new_value) {
-        $this->materiale = $new_value;
-    }
+    // public function setMateriale($new_value) {
+    //     $this->materiale = $new_value;
+    // }
 
-    public function setTipo($new_value) {
-        $this->tipo = $new_value;
-    }
+    // public function setTipo($new_value) {
+    //     $this->tipo = $new_value;
+    // }
 
     
     public function printCardCucciaHTML() {

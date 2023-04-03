@@ -1,28 +1,31 @@
 <?php
 require_once __DIR__ . "/Prodotto.php";
+require_once __DIR__ . "/materialeTipo.php";
 
 
 class Gioco extends Prodotto {
-    protected $materiale;
+    use materialeTipo;
+    // protected $materiale;
     protected $colore;
 
-    function __construct($nome, $prezzo, $categoria, $marca,  $immagine, $_materiale){
+    function __construct($nome, $prezzo, $categoria, $marca,  $immagine, $_materiale, $_colore){
         parent::__construct($nome, $prezzo, 'gioco', $categoria, $marca,  $immagine);
 
         $this->materiale = $_materiale;
+        $this->colore = $_colore;
     }
 
-    public function getMateriale() {
-        return $this->materiale;
-    }
+    // public function getMateriale() {
+    //     return $this->materiale;
+    // }
 
     public function getColore() {
         return $this->colore;
     }
 
-    public function setMateriale($new_value) {
-        $this->materiale = $new_value;
-    }
+    // public function setMateriale($new_value) {
+    //     $this->materiale = $new_value;
+    // }
 
     public function setColore($new_value) {
         $this->colore = $new_value;
